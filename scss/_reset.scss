@@ -1,0 +1,172 @@
+// Reset Documents
+
+/*  ===============
+  1. Reset
+===============  */
+
+@import 'mixin';
+@import 'mixins/font-kit';
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    &:before,
+    &:after {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 15px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    color: $black;
+    font-family: $roboto;
+    font-size: 15px;
+    font-weight: 300;
+    background: $white;
+}
+
+p {
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.clear {
+    clear: both;
+}
+
+a {
+    @include transition-ease(0.2s);
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+a:focus,
+button:focus,
+svg:focus {
+    border: none;
+    -moz-appearance: none;
+    outline: none;
+}
+
+a[href^="tel"] {
+    color: inherit;
+    cursor: default;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* == a. Heading == */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $brand;
+    display: block;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-input-placeholder {
+    color: $nav-color;
+}
+
+::-moz-placeholder {
+    color: $nav-color;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: $nav-color;
+}
+
+::placeholder {
+    color: $nav-color;
+}
+
+button,
+input[type=submit],
+input[type=reset] {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    @include transition-ease(0.5s);
+    -moz-appearance: none;
+    &:focus,
+    &:hover {
+        border: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+    }
+}
+
+input {
+    box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-shadow: none;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    border: none;
+    padding: 10px;
+    resize: none;
+    box-shadow: none;
+}
+
+.mar-b {
+    margin-bottom: 0 !important;
+}
+
+.pad-l {
+    padding-left: 0 !important;
+}
+
+.pad-r {
+    padding-right: 0 !important;
+}
+
+.pad-lr {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.pad-tb {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+.pad-none {
+    padding: 0 !important;
+}
+
+.p-b-n {
+    padding-top: 0 !important;
+}
